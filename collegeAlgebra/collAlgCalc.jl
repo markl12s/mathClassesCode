@@ -12,16 +12,11 @@ quadratic formula
 
 function quadratic_formula(a, b, c)
     # find the part inside the square root
-    bSquared = b ^ 2
-    fourAC = 4 * a * c
-    insideSqrt = bSquared - fourAC
+    insideSqrt = b^2 - (4 * a * c)
 
     # square root that part
-    if insideSqrt >= 0
-        squareRoot = sqrt(insideSqrt)
-    else insideSqrt
-        squareRoot = sqrt(complex(insideSqrt))
-    end
+    if insideSqrt >= 0; squareRoot = sqrt(insideSqrt)
+    else insideSqrt; squareRoot = sqrt(complex(insideSqrt)); end
 
     # add/subtract - b
     addSquareRoot = -b + squareRoot
@@ -32,9 +27,9 @@ function quadratic_formula(a, b, c)
     addSquareRoot = addSquareRoot / twoA
     subtractSquareRoot = subtractSquareRoot / twoA
 
-    print(addSquareRoot)
+    print(addSquareRoot + equals)
     print("\n")
-    print(subtractSquareRoot)
+    print(subtractSquareRoot + equals)
 end
 
 
@@ -44,4 +39,4 @@ call functions
 ---------------------------------------------------------------------------------------------------------------
 """
 
-quadratic_formula(2, -3, -5)
+quadratic_formula(6, -12, 7)
